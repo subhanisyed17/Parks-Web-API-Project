@@ -18,7 +18,7 @@ namespace ParkyAPI.Controllers
     //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecTrails")]
     public class TrailsController : ControllerBase
     {
-        private ITrailRepsoitory _trailRepo;
+        private readonly ITrailRepsoitory _trailRepo;
 
         private readonly IMapper _mapper;
 

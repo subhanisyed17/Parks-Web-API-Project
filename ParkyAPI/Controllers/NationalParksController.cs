@@ -18,7 +18,7 @@ namespace ParkyAPI.Controllers
     //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecNP")]
     public class NationalParksController : ControllerBase
     {
-        private INationalParkRepository _nationalParkRepo;
+        private readonly INationalParkRepository _nationalParkRepo;
 
         private readonly IMapper _mapper;
 
