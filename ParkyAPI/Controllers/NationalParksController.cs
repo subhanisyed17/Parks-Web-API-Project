@@ -13,6 +13,7 @@ namespace ParkyAPI.Controllers
 {
     //[Route("api/[controller]")]
     [Route("api/v{version:apiVersion}/nationalparks")]
+    // If not mentioned 1.0 will be the default version
     [ApiVersion("1.0")]
     [ApiController]
     //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecNP")]
