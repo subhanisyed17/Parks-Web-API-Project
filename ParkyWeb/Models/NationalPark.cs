@@ -4,14 +4,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ParkyAPI.models.DTOs
+namespace ParkyWeb.Models
 {
-    public class NationalParkDTO
-    {   
+    public class NationalPark
+    {
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set;}
+        public string Name { get; set; }
         [Required]
         public string State { get; set; }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ParkyAPI.models;
@@ -35,6 +36,7 @@ namespace ParkyAPI.Controllers
         /// <returns></returns>
 
         [HttpGet]
+        [Authorize]
         [ProducesResponseType(200,Type = typeof(List<NationalParkDTO>))]
         [ProducesResponseType(400)]
         public IActionResult GetNationalParks()
