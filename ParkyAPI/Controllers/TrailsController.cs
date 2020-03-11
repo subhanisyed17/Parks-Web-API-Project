@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ParkyAPI.models;
@@ -36,6 +37,7 @@ namespace ParkyAPI.Controllers
         [HttpGet]
         [ProducesResponseType(200,Type = typeof(List<TrailDTO>))]
         [ProducesResponseType(400)]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetTrails()
         {
             var trail = _trailRepo.GetTrails();
